@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ling's Work</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero"></div>
+    <script>
+    window.addEventListener("scroll", function() {
+        let hero = document.querySelector(".hero");
+        let scrollPos = window.scrollY;
+        hero.style.opacity = Math.max(1 - scrollPos / 50, 0);
+    });
+    </script>
+    <div class="header">
+        <h1>Le Poème</h1>
+        <div class="menu">
+            <!-- 点击后打开邮件客户端 -->
+            <a href="mailto:yuxinnan8@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you.">E-mail</a>
+            
+            <!-- 跳转到个人简介页面（替换为你的真实 Bio 链接）-->
+            <a href="bio.html" target="_blank">Ling's Bio ↗</a>
+            
+            <!-- 跳转到 Instagram 并在新标签打开 -->
+            <a href="https://www.instagram.com/yuling2004/" target="_blank">Instagram ↗</a>
+        </div>
+    </div>  
+    <div class="filter">
+        <button>ALL</button>
+        <button>ARTIFACT</button>
+        <button>WRITINGS</button>
+        <button>EXPERIMENTS</button>
+        <button>FUNS</button>
+    </div>
+    <div class="works">
+        <div class="work-item">
+            <div class="work-text">
+            <h3>Imagine Memories</h3>
+            <p>In a world where human and AI's memories are intertwined...</p>
+            </div>
+            <div class="work-images">
+                <img src="images/work1.JPG" class="wide">
+                <img src="images/work2.png" class="wide">
+            </div>
+        </div>
+        <div class="work-item">
+            <div class="work-text">
+                <h3>诗 Poésie</h3>
+                <p>An ongoing poetry program, about seasons and changes</p>
+            </div>
+            <div class="work-images">
+                <img src="images/poem-2.JPG">
+                <img src="images/poem-3.JPG">
+                <img src="images/poem-4.JPG">
+                <img src="images/poem-5.JPG">
+            </div>
+        </div>
+        <div class="work-item">
+            <div class="work-text">
+                <h3>The Touch</h3>
+                <p>Sensing the nature through touch.</p>
+            </div>
+            <div class="work-images">
+                <img src="images/3-1.jpeg">
+                <img src="images/3-2.jpeg">
+                <img src="images/3-3.jpeg">
+            </div>
+        </div>
+        <div class="work-item">
+            <div class="work-text">
+            <h3>The Wild of Birds</h3>
+            <p>An application for trekker*bird lovers</p>
+            </div>
+            <div class="work-images">
+                <img src="images/4-1.png" class="wide">
+            </div>
+        </div>
+        <div class="work-item">
+            <div class="work-text">
+                <h3>EcoIsland(Concept)</h3>
+                <p>I wanna build an island on the small lake in our campus.</p>
+            </div>
+            <div class="work-images">
+                <img src="https://via.placeholder.com/600x900/CCCCCC">
+            </div>
+        </div>
+        <div class="work-item">
+            <div class="work-text">
+                <h3>Ai Bartender</h3>
+                <p>What to drink at a bar? - A current project</p>
+            </div>
+            <div class="work-images">
+            <img src="https://via.placeholder.com/600x900/CCCCCC">
+            </div>
+        </div>
+    </div>
+    <div id="lightbox" class="lightbox">
+        <button class="prev">&#10094;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="next">&#10095;</button>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>

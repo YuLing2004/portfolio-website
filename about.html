@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me - Self Introduction</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wittgenstein&display=swap">
+  <style>
+    body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+    }
+    
+    .about-container {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      z-index: 2;
+      padding: 2rem 0;
+    }
+    
+    .about-content {
+      max-width: 800px;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      text-align: left;
+      animation: fadeInUp 1.5s ease-out;
+      margin-top: 0;
+    }
+    
+    .about-title {
+      font-family: "Wittgenstein", serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    
+    .about-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #333, transparent);
+    }
+    
+    .portrait-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .portrait-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .portrait-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .about-text {
+      font-family: "Wittgenstein", serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    
+    .about-section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-left: 3px solid #333;
+      background: rgba(0, 0, 0, 0.02);
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .section-title {
+      font-family: "Wittgenstein", serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: left;
+      margin-top: 1rem;
+    }
+    
+    .skill-tag {
+      background: #333;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      background: #555;
+      transform: translateY(-2px);
+    }
+    
+    .contact-info {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #666;
+    }
+    
+    .back-button {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      color: #333;
+      text-decoration: none;
+      font-family: "Wittgenstein", serif;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+      z-index: 10;
+    }
+    
+    .back-button:hover {
+      color: #666;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .floating-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .floating-element {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.1;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .floating-element:nth-child(1) {
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    
+    .floating-element:nth-child(2) {
+      top: 20%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+    
+    .floating-element:nth-child(3) {
+      bottom: 20%;
+      left: 15%;
+      animation-delay: 4s;
+    }
+    
+    .floating-element:nth-child(4) {
+      bottom: 10%;
+      right: 10%;
+      animation-delay: 1s;
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back button -->
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <!-- About content -->
+  <div class="about-container">
+    <div class="about-content">
+      
+      <div class="portrait-container">
+        <img src="PICs/Portrait.png" alt="Xinnan YU Portrait" class="portrait-image">
+      </div>
+      
+      <div class="about-section">
+        <h2 class="section-title">Personal Introduction</h2>
+        <p class="about-text">
+          My name is Xinnan YU, aka Yuling.
+          <br>I am a designer currently based in Shanghai, China.
+        </p>
+      </div>
+      
+      <div class="about-section">
+        <h2 class="section-title">Design Focus</h2>
+        <p class="about-text">
+          I currently focus on designs for a better future. 
+          <br>I am fascinated by earthly objects, and how we intersects with them.
+          <br>My design contains installations, digital art, and other interactive experiences.
+        </p>
+      </div>
+      
+      <div class="about-section">
+        <h2 class="section-title">Soft Professional Skills</h2>
+        <div class="skills-list">
+          <span class="skill-tag">Critical Design Thinking</span>
+          <span class="skill-tag">Design Research</span>
+          <span class="skill-tag">Project Management</span>
+        </div>
+      </div>
+      
+      <div class="about-section">
+        <h2 class="section-title">Hard Professional Skills</h2>
+        <div class="skills-list">
+          <span class="skill-tag">Modelling (Blender, Rhino, SketchUp)</span>  
+          <span class="skill-tag">Frontend Development (HTML, CSS, JavaScript)</span>
+          <span class="skill-tag">Visual Design (Ai, PS)</span>
+          <span class="skill-tag">Hardware Design (Arduino, micropytho, ESP32)</span>
+          <span class="skill-tag">Unity Game Design (C#)</span> 
+          <span class="skill-tag">Handcrafting & Prototyping</span>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2 class="section-title">Past Exhibitions</h2>
+        <p class="about-text">
+          <br> - 2025.04.07 - 2025.04.13
+          <br>Imagine Memories
+          <br>MDW, Milan, Italy
+          <br>
+          <br>- 2025.07.29 - 2025.08.04
+          <br>Rainweaver
+          <br>Shanghai, China
+          <br>
+          <br>- 2025.10.18 - 2025.10.26
+          <br>Rainweaver
+          <br>DDW, Eindhoven, Netherlands
+          <br>
+        </p>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <span>📸</span>
+          <a href="https://www.instagram.com/yuling2004/" target="_blank" style="color: #666; text-decoration: none;">Instagram: @yuling2004</a>
+        </div>
+        <div class="contact-item">
+          <span>📧</span>
+          <span>E-mail: yuxinnan8@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span>📍</span>
+          <span>Shanghai, China</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Ensure page scrolls to top when loaded
+    window.onload = function() {
+      window.scrollTo(0, 0);
+    };
+    
+    // Also scroll to top when page is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+</html> 

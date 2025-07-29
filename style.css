@@ -1,0 +1,757 @@
+body {
+    margin: 0;
+    background: #fff;
+    font-family: "Noto Serif SC", serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Rain animation container */
+  .rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  /* Rain lines */
+  .rain-line {
+    position: absolute;
+    height: 2px;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.2) 3px,
+      rgba(0, 0, 0, 0.2) 6px
+    );
+    transform: rotate(45deg);
+    /* animation: rain-fall 30s linear infinite; */
+    opacity: 0; /* Hide rain lines */
+  }
+
+  /* Rain lines positioned from top-left to bottom-right with varying lengths */
+  .rain-line:nth-child(1) {
+    left: 10%;
+    top: 0;
+    width: 80px;
+    animation-duration: 8s;
+    animation-delay: 0s;
+  }
+
+  .rain-line:nth-child(2) {
+    left: 20%;
+    top: 0;
+    width: 120px;
+    animation-duration: 7s;
+    animation-delay: 1s;
+  }
+
+  .rain-line:nth-child(3) {
+    left: 30%;
+    top: 0;
+    width: 60px;
+    animation-duration: 9s;
+    animation-delay: 2s;
+  }
+
+  .rain-line:nth-child(4) {
+    left: 40%;
+    top: 0;
+    width: 100px;
+    animation-duration: 6s;
+    animation-delay: 0.5s;
+  }
+
+  .rain-line:nth-child(5) {
+    left: 50%;
+    top: 0;
+    width: 140px;
+    animation-duration: 8.5s;
+    animation-delay: 1.5s;
+  }
+
+  .rain-line:nth-child(6) {
+    left: 60%;
+    top: 0;
+    width: 90px;
+    animation-duration: 7.5s;
+    animation-delay: 2.5s;
+  }
+
+  .rain-line:nth-child(7) {
+    left: 70%;
+    top: 0;
+    width: 110px;
+    animation-duration: 9.5s;
+    animation-delay: 3s;
+  }
+
+  .rain-line:nth-child(8) {
+    left: 80%;
+    top: 0;
+    width: 70px;
+    animation-duration: 6.5s;
+    animation-delay: 0.8s;
+  }
+
+  .rain-line:nth-child(9) {
+    left: 90%;
+    top: 0;
+    width: 130px;
+    animation-duration: 8.2s;
+    animation-delay: 1.8s;
+  }
+
+  .rain-line:nth-child(10) {
+    left: 15%;
+    top: 0;
+    width: 95px;
+    animation-duration: 7.8s;
+    animation-delay: 2.2s;
+  }
+
+  .rain-line:nth-child(11) {
+    left: 25%;
+    top: 0;
+    width: 75px;
+    animation-duration: 9.2s;
+    animation-delay: 0.3s;
+  }
+
+  .rain-line:nth-child(12) {
+    left: 35%;
+    top: 0;
+    width: 115px;
+    animation-duration: 6.8s;
+    animation-delay: 1.2s;
+  }
+
+  .rain-line:nth-child(13) {
+    left: 45%;
+    top: 0;
+    width: 85px;
+    animation-duration: 7.2s;
+    animation-delay: 0.7s;
+  }
+
+  .rain-line:nth-child(14) {
+    left: 55%;
+    top: 0;
+    width: 125px;
+    animation-duration: 8.8s;
+    animation-delay: 1.9s;
+  }
+
+  .rain-line:nth-child(15) {
+    left: 65%;
+    top: 0;
+    width: 65px;
+    animation-duration: 6.3s;
+    animation-delay: 0.4s;
+  }
+
+  .rain-line:nth-child(16) {
+    left: 75%;
+    top: 0;
+    width: 105px;
+    animation-duration: 9.1s;
+    animation-delay: 2.1s;
+  }
+
+  .rain-line:nth-child(17) {
+    left: 85%;
+    top: 0;
+    width: 135px;
+    animation-duration: 7.7s;
+    animation-delay: 1.3s;
+  }
+
+  .rain-line:nth-child(18) {
+    left: 95%;
+    top: 0;
+    width: 55px;
+    animation-duration: 8.3s;
+    animation-delay: 0.9s;
+  }
+
+  .rain-line:nth-child(19) {
+    left: 5%;
+    top: 0;
+    width: 145px;
+    animation-duration: 6.9s;
+    animation-delay: 2.3s;
+  }
+
+  .rain-line:nth-child(20) {
+    left: 12%;
+    top: 0;
+    width: 88px;
+    animation-duration: 8.6s;
+    animation-delay: 1.6s;
+  }
+
+  .rain-line:nth-child(21) {
+    left: 22%;
+    top: 0;
+    width: 112px;
+    animation-duration: 7.4s;
+    animation-delay: 0.6s;
+  }
+
+  .rain-line:nth-child(22) {
+    left: 32%;
+    top: 0;
+    width: 78px;
+    animation-duration: 9.3s;
+    animation-delay: 1.8s;
+  }
+
+  .rain-line:nth-child(23) {
+    left: 42%;
+    top: 0;
+    width: 128px;
+    animation-duration: 6.7s;
+    animation-delay: 2.4s;
+  }
+
+  .rain-line:nth-child(24) {
+    left: 52%;
+    top: 0;
+    width: 92px;
+    animation-duration: 8.1s;
+    animation-delay: 0.8s;
+  }
+
+  .rain-line:nth-child(25) {
+    left: 62%;
+    top: 0;
+    width: 108px;
+    animation-duration: 7.9s;
+    animation-delay: 1.4s;
+  }
+
+  .rain-line:nth-child(26) {
+    left: 72%;
+    top: 0;
+    width: 82px;
+    animation-duration: 15s;
+    animation-delay: 2.0s;
+  }
+
+  /* Wave clusters positioned around characters */
+ 
+  /* Top left */
+  .wave-cluster.top-left {
+    top: 5%;
+    left: 9%;
+    font-size: 1.3vw;
+  }
+
+  .wave-cluster.wind-area {
+    top: 9%;
+    left: 14%;
+    font-size: 1.4vw;
+  }
+
+  .wave-cluster.wind-area-between {
+    top: 13%;
+    left: 19%;
+    font-size: 1.6vw;
+  }
+
+  /* Upper right sea */
+  .wave-cluster.sea-area-up {
+    top: 9%;
+    left: 72%;
+    font-size: 1.6vw;
+  }
+
+  .wave-cluster.sea-area {
+    top: 13%;
+    left: 84%;
+    font-size: 1.6vw;
+  }
+
+  /* Middle left poetry */
+  .wave-cluster.poetry-area {
+    top: 46%;
+    left: 5%;
+    font-size: 1.2vw;
+  }
+
+  .wave-cluster.poetry-area-lower {
+    top: 50%;
+    left: 5%;
+    font-size: 1.2vw;
+  }
+
+  /* Rain */
+  .wave-cluster.rain-area-up {
+    top: 78%;
+    left: 40%;
+    font-size: 1.3vw;
+  }
+
+  .wave-cluster.rain-area-middle {
+    top: 82%;
+    left: 35%;
+    font-size: 1.3vw;
+  }
+
+  .wave-cluster.rain-area-down {
+    top: 86%;
+    left: 30%;
+    font-size: 1.3vw;
+  }
+
+  /* Heart */
+  .wave-cluster.heart-area-up {
+    top: 50%;
+    left: 65%;
+    font-size: 1.4vw;
+  }
+
+  .wave-cluster.heart-area-middle {
+    top: 54%;
+    left: 65%;
+    font-size: 1.4vw;
+  }
+  .wave-cluster.heart-area-lower {
+    top: 58%;
+    left: 67%;
+    font-size: 1.4vw;
+  }
+
+  /* Rain fall animation */
+  @keyframes rain-fall {
+    0% {
+      transform: rotate(45deg) translateY(-50px) translateX(-50px);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: rotate(45deg) translateY(100vh) translateX(100vh);
+      opacity: 0;
+    }
+  }
+
+  /* Wave glyph cluster effect */
+  .wave-cluster {
+    position: absolute;
+    font-family: "PingFang SC", "PingFang", sans-serif;
+    font-weight: 100;
+    color: #000000;
+    opacity: 0.8; /* Show waves immediately */
+    pointer-events: none;
+    z-index: 500;
+  }
+
+  .wave-glyph {
+    display: inline-block;
+    font-size: 1.5vw;
+  }
+
+  /* Different animation patterns for each wave cluster */
+  .wave-cluster.top-left {
+    animation: wave-float-left 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.top-left .wave-glyph:nth-child(1) {
+    animation: wave-float-up 8s ease-in-out infinite;
+  }
+
+  .wave-cluster.top-left .wave-glyph:nth-child(2) {
+    animation: wave-float-right 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.top-left .wave-glyph:nth-child(3) {
+    animation: wave-float-down 9s ease-in-out infinite;
+  }
+
+  .wave-cluster.wind-area {
+    animation: wave-float-right 15s ease-in-out infinite;
+  }
+
+  .wave-cluster.wind-area .wave-glyph:nth-child(1) {
+    animation: wave-float-up 11s ease-in-out infinite;
+  }
+
+  .wave-cluster.wind-area .wave-glyph:nth-child(2) {
+    animation: wave-float-left 13s ease-in-out infinite;
+  }
+
+  .wave-cluster.wind-area-between {
+    animation: wave-float-up 14s ease-in-out infinite;
+  }
+
+  .wave-cluster.wind-area-between .wave-glyph:nth-child(1) {
+    animation: wave-float-right 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.wind-area-between .wave-glyph:nth-child(2) {
+    animation: wave-float-down 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area-up {
+    animation: wave-float-right 16s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area-up .wave-glyph {
+    animation: wave-float-up 13s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area {
+    animation: wave-float-left 18s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area .wave-glyph:nth-child(1) {
+    animation: wave-float-up 9s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area .wave-glyph:nth-child(2) {
+    animation: wave-float-right 11s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area .wave-glyph:nth-child(3) {
+    animation: wave-float-down 14s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area .wave-glyph:nth-child(4) {
+    animation: wave-float-left 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.sea-area .wave-glyph:nth-child(5) {
+    animation: wave-float-up 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area {
+    animation: wave-float-down 13s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area .wave-glyph:nth-child(1) {
+    animation: wave-float-left 8s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area .wave-glyph:nth-child(2) {
+    animation: wave-float-right 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area .wave-glyph:nth-child(3) {
+    animation: wave-float-up 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area-lower {
+    animation: wave-float-left 11s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area-lower .wave-glyph:nth-child(1) {
+    animation: wave-float-up 9s ease-in-out infinite;
+  }
+
+  .wave-cluster.poetry-area-lower .wave-glyph:nth-child(2) {
+    animation: wave-float-right 13s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-up {
+    animation: wave-float-down 14s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-up .wave-glyph:nth-child(1) {
+    animation: wave-float-left 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-up .wave-glyph:nth-child(2) {
+    animation: wave-float-right 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-up .wave-glyph:nth-child(3) {
+    animation: wave-float-up 11s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-middle {
+    animation: wave-float-right 15s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-middle .wave-glyph:nth-child(1) {
+    animation: wave-float-up 9s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-middle .wave-glyph:nth-child(2) {
+    animation: wave-float-left 13s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-down {
+    animation: wave-float-left 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-down .wave-glyph:nth-child(1) {
+    animation: wave-float-up 11s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-down .wave-glyph:nth-child(2) {
+    animation: wave-float-right 8s ease-in-out infinite;
+  }
+
+  .wave-cluster.rain-area-down .wave-glyph:nth-child(3) {
+    animation: wave-float-down 14s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-up {
+    animation: wave-float-up 16s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-up .wave-glyph:nth-child(1) {
+    animation: wave-float-left 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-up .wave-glyph:nth-child(2) {
+    animation: wave-float-right 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-middle {
+    animation: wave-float-right 13s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-middle .wave-glyph:nth-child(1) {
+    animation: wave-float-up 9s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-middle .wave-glyph:nth-child(2) {
+    animation: wave-float-left 11s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-middle .wave-glyph:nth-child(3) {
+    animation: wave-float-down 14s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-lower {
+    animation: wave-float-left 15s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-lower .wave-glyph:nth-child(1) {
+    animation: wave-float-up 12s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-lower .wave-glyph:nth-child(2) {
+    animation: wave-float-right 10s ease-in-out infinite;
+  }
+
+  .wave-cluster.heart-area-lower .wave-glyph:nth-child(3) {
+    animation: wave-float-down 13s ease-in-out infinite;
+  }
+
+  /* Wave appear animation */
+  @keyframes wave-appear {
+    0%, 5% {
+      opacity: 0;
+    }
+    10%, 80% {
+      opacity: 0.8;
+    }
+    85%, 100% {
+      opacity: 0;
+    }
+  }
+
+  /* Enhanced wave floating animations with different directions */
+  @keyframes wave-float {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-3px) translateX(2px);
+    }
+    50% {
+      transform: translateY(-1px) translateX(-2px);
+    }
+    75% {
+      transform: translateY(-4px) translateX(1px);
+    }
+  }
+
+  @keyframes wave-float-up {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-5px) translateX(1px);
+    }
+    50% {
+      transform: translateY(-8px) translateX(-1px);
+    }
+    75% {
+      transform: translateY(-3px) translateX(2px);
+    }
+  }
+
+  @keyframes wave-float-down {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(3px) translateX(-1px);
+    }
+    50% {
+      transform: translateY(6px) translateX(2px);
+    }
+    75% {
+      transform: translateY(2px) translateX(-2px);
+    }
+  }
+
+  @keyframes wave-float-left {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-2px) translateX(-4px);
+    }
+    50% {
+      transform: translateY(1px) translateX(-7px);
+    }
+    75% {
+      transform: translateY(-3px) translateX(-2px);
+    }
+  }
+
+  @keyframes wave-float-right {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-1px) translateX(3px);
+    }
+    50% {
+      transform: translateY(2px) translateX(6px);
+    }
+    75% {
+      transform: translateY(-2px) translateX(4px);
+    }
+  }
+  
+  .top-nav {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    z-index: 10;
+    font-size: 0.9em;
+  }
+  
+  .top-nav a {
+    margin-left: 1em;
+    color: #111;
+    text-decoration: none;
+  }
+  
+  .free-layout {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  
+  .item {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .seal-character {
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .character-label {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 100;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 0.5em;
+    text-align: center;
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .item::before {
+    content: "";
+    position: absolute;
+    top: -10%; left: -10%;
+    width: 120%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1.2s ease;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+    mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+  }
+  
+  .item:hover {
+    animation: breathing 3s ease-in-out infinite;
+  }
+  
+  .item:hover .seal-character {
+    filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.5)) brightness(0) invert(1);
+    transform: scale(1.05);
+  }
+  
+  .item:hover .character-label {
+    color: #333;
+    transform: scale(1.02);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .item:hover::before {
+    opacity: 1;
+  }
+  
+  .item[data-index="1"]::before {
+    background-image: url('./PICs/Project1-cover.png');
+  }
+  .item[data-index="2"]::before {
+    background-image: url('./PICs/Project2-cover.png');
+  }
+  .item[data-index="3"]::before {
+    background-image: url('./PICs/Project3-cover.png');
+  }
+  .item[data-index="4"]::before {
+    background-image: url('./PICs/Project4-cover.png');
+  }
+  .item[data-index="5"]::before {
+    background-image: url('./PICs/Project5-cover.png');
+  }
+  .item[data-index="6"]::before {
+    background-image: url('./PICs/Project6-cover.png');
+  }
+  .item[data-index="7"]::before {
+    background-image: url('./PICs/Project7-cover.png');
+  }
+  
+  @keyframes breathing {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  

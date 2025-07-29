@@ -1,0 +1,126 @@
+body {
+    font-family: 'Bodoni Moda', serif;
+    color: #231F20;
+    background-color: #fff;
+    margin: 0;
+    padding: 30px;
+}
+.hero {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url('images/hero-image.JPG') no-repeat center center/cover;
+    opacity: 0.3;
+    transition: opacity 1.5s ease-in-out;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    height: 400px; /* 增加高度 */
+}
+.menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #231F20;
+}
+.filter {
+    margin: 20px 0;
+    border-bottom: 2px solid #231F20;
+    padding-bottom: 10px;
+}
+.filter button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: #231F20;
+}
+/* work-item 的整体布局 */
+.work-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 文本部分 */
+.work-text {
+    flex: 1;  /* 让文本部分占据可用空间 */
+    padding-right: 20px;
+}
+
+/* 图片容器 */
+.work-images {
+    display: flex;
+    gap: 10px; /* 图片之间的间距 */
+    width: 500px;  /* 固定图片部分的宽度 */
+    height: 180px; /* 固定图片部分的高度 */
+    overflow: hidden; /* 避免图片溢出 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 让图片填充固定框，并保持比例 */
+.work-images img {
+    width: 90px;    /* 限制单张图片的宽度 */
+    height: 160px;   /* 限制单张图片的高度 */
+    object-fit: cover; /* 让图片填充整个框，不变形 */
+    border-radius: 1px;
+}
+.work-images .wide {
+height: 160px;
+width: auto;  /* 宽度自动适配 */
+object-fit: contain; /* 保持比例 */
+border-radius: 1px;
+}
+
+/* 浮窗样式 */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 滑动按钮样式 */
+.lightbox .prev, .lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.lightbox .prev {
+    left: 20px;
+}
+
+.lightbox .next {
+    right: 20px;
+}

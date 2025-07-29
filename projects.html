@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Xinnan YU</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wittgenstein&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Wittgenstein", serif;
+            background: #fff;
+            color: #333;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #666;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 2rem 2rem;
+        }
+
+        .filter {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter button {
+            background: none;
+            border: 1px solid #333;
+            padding: 0.5rem 1.5rem;
+            border-radius: 10px;
+            font-family: "Wittgenstein", serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter button:hover,
+        .filter button.active {
+            background: #333;
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .project-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #f5f5f5;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 1rem 0;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            color: #333;
+            text-decoration: none;
+            font-family: "Wittgenstein", serif;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            z-index: 1001;
+        }
+
+        .back-button:hover {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 100px 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Home</a>
+
+    <div class="container">
+        <div class="filter">
+            <button class="active">ALL</button>
+            <button>DESIGNS</button>
+            <button>WRITINGS</button>
+            <button>EXPERIMENTS</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-item" data-category="designs">
+                <img src="PICs/Project6-cover.png" alt="Imagine Memories" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Imagine Memories</h3>
+                    <p class="project-description">In a world where human and AI's memories are intertwined, this project explores the boundaries between artificial and human consciousness.</p>
+                    <span class="project-category">DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="designs">
+                <img src="PICs/Project4-cover.png" alt="Rainweaver" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Rainweaver</h3>
+                    <p class="project-description">An automated rainweaving process that invites rain to weave beautiful patterns. Automizing the process of weaving rain.</p>
+                    <span class="project-category">DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="designs">
+                <img src="PICs/Project7-cover.png" alt="AI Bartender" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Fungi & Futures</h3>
+                    <p class="project-description">Smart fungi can teach us a lot how to connect with nature through listening and sensing. Some biodesign projects.</p>
+                    <span class="project-category">DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="designs">
+                <img src="PICs/Project1-cover.png" alt="The Touch" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Cloud Adventure</h3>
+                    <p class="project-description">A game designed in airplanes that explores the relationship between humans and nature. How could we be more connected with the nature?</p>
+                    <span class="project-category">DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="writings">
+                <img src="PICs/Project2-cover.png" alt="诗 Poésie" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Poetics</h3>
+                    <p class="project-description">An ongoing poetry program about seasons and changes. Hoping to reach to the unreachables through humble words.</p>
+                    <span class="project-category">WRITINGS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="experiments">
+                <img src="PICs/Project5-cover.png" alt="EcoIsland" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Navigation of Ships</h3>
+                    <p class="project-description">A conceptual project to simulate the navigation of ships in the sea. How procarious it could be to navigate the sea?</p>
+                    <span class="project-category">EXPERIMENTS</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter button');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const category = button.textContent.toLowerCase();
+                
+                projectItems.forEach(item => {
+                    if (category === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const itemCategory = item.getAttribute('data-category');
+                        if (itemCategory === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll to top when page loads
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+</body>
+</html>
