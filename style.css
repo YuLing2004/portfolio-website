@@ -749,24 +749,31 @@ body {
     background-image: url('./PICs/Project7-cover.png');
   }
   
-  /* Project link styles */
-  .project-link {
+  @keyframes breathing {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Link styles for rain item */
+  .item a {
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    height: 100%;
   }
   
-  .project-link:hover {
+  .item a:hover {
     text-decoration: none;
-    color: inherit;
   }
   
-  @keyframes breathing {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
+  /* Ensure the link area covers the entire item */
+  .item[data-index="4"] a {
+    position: relative;
+    z-index: 2;
   }
   
