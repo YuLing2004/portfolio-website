@@ -748,6 +748,9 @@ body {
   .item[data-index="7"]::before {
     background-image: url('./PICs/Project7-cover.png');
   }
+  .item[data-index="8"]::before {
+    background-image: url('./PICs/Project8-cover.png');
+  }
   
   @keyframes breathing {
     0% { transform: scale(1); }

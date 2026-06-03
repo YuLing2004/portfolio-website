@@ -86,7 +86,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 3rem;
         }
 
@@ -181,16 +181,8 @@
         </div>
 
         <div class="projects-grid">
-            <div class="project-item" data-category="designs">
-                <img src="PICs/Project6-cover.png" alt="Imagine Memories" class="project-image">
-                <div class="project-content">
-                    <h3 class="project-title">Imagine Memories</h3>
-                    <p class="project-description">In a world where human and AI's memories are intertwined, this project explores the boundaries between artificial and human consciousness.</p>
-                    <span class="project-category">DESIGNS</span>
-                </div>
-            </div>
 
-            <div class="project-item" data-category="designs">
+            <div class="project-item" data-category="designs" data-link="https://rainweaver.yuling.design">
                 <img src="PICs/Project4-cover.png" alt="Rainweaver" class="project-image">
                 <div class="project-content">
                     <h3 class="project-title">Rainweaver</h3>
@@ -199,7 +191,25 @@
                 </div>
             </div>
 
-            <div class="project-item" data-category="designs">
+            <div class="project-item" data-category="designs" data-link="https://airscape.yuling.design">
+                <img src="PICs/Project8-cover.png" alt="Airscape" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Airscape</h3>
+                    <p class="project-description">Translating air & particle movement into embodied dynamic spatial experience</p>
+                    <span class="project-category">DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="designs" data-link="https://imagine-memories.yuling.design">
+                <img src="PICs/Project6-cover.png" alt="Imagine Memories" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Imagine Memories</h3>
+                    <p class="project-description">In a world where human and AI's memories are intertwined, this project explores the boundaries between artificial and human consciousness.</p>
+                    <span class="project-category">DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="project-item" data-category="designs" data-link="https://mycomat.yuling.design">
                 <img src="PICs/Project7-cover.png" alt="AI Bartender" class="project-image">
                 <div class="project-content">
                     <h3 class="project-title">Fungi & Futures</h3>
@@ -208,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="project-item" data-category="designs">
+            <div class="project-item" data-category="designs" data-link="https://clouds-adventure.yuling.design">
                 <img src="PICs/Project1-cover.png" alt="The Touch" class="project-image">
                 <div class="project-content">
                     <h3 class="project-title">Cloud Adventure</h3>
@@ -217,7 +227,7 @@
                 </div>
             </div>
 
-            <div class="project-item" data-category="writings">
+            <div class="project-item" data-category="writings" data-link="https://poetics.yuling.design">
                 <img src="PICs/Project2-cover.png" alt="诗 Poésie" class="project-image">
                 <div class="project-content">
                     <h3 class="project-title">Poetics</h3>
@@ -226,7 +236,7 @@
                 </div>
             </div>
 
-            <div class="project-item" data-category="experiments">
+            <div class="project-item" data-category="experiments" data-link="https://navigations.yuling.design">
                 <img src="PICs/Project5-cover.png" alt="EcoIsland" class="project-image">
                 <div class="project-content">
                     <h3 class="project-title">Navigation of Ships</h3>
@@ -235,7 +245,6 @@
                 </div>
             </div>
 
-
         </div>
     </div>
 
@@ -243,21 +252,23 @@
         // Filter functionality
         const filterButtons = document.querySelectorAll('.filter button');
         const projectItems = document.querySelectorAll('.project-item');
-
+    
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
+    
                 // Add active class to clicked button
                 button.classList.add('active');
-
+    
                 const category = button.textContent.toLowerCase();
-                
+    
                 projectItems.forEach(item => {
                     if (category === 'all') {
                         item.style.display = 'block';
                     } else {
                         const itemCategory = item.getAttribute('data-category');
+    
                         if (itemCategory === category) {
                             item.style.display = 'block';
                         } else {
@@ -267,7 +278,20 @@
                 });
             });
         });
-
+    
+        // Click card to open project website
+        projectItems.forEach(item => {
+            item.style.cursor = 'pointer';
+    
+            item.addEventListener('click', () => {
+                const link = item.getAttribute('data-link');
+    
+                if (link) {
+                    window.open(link, '_blank');
+                }
+            });
+        });
+    
         // Smooth scroll to top when page loads
         window.onload = function() {
             window.scrollTo(0, 0);
